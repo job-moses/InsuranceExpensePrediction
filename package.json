@@ -1,0 +1,11 @@
+{
+  "name": "Insurance",
+  "version": "1.0.0",
+  "description": "predict life insurance expenses",
+  "main": "index.js",
+  "author": "Job Moses",
+  "license": "MIT",
+    "scripts": {
+    "watch" : "yarn tailwindcss -i ./static/src/css/input.css -o ./static/dist/css/output.css --watch"
+  }
+}
