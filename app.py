@@ -14,12 +14,10 @@ with open('model.pkl', 'rb') as model_file:
 @app.route('/')
 def index():
     prediction = session.pop('prediction', None)
-    print(prediction)
     return render_template('index.html' , prediction = prediction)
 
 @app.route('/predict', methods=['GET','POST'])
 def predict():
-        
             try:
                     data = {
                         "age": [int(request.form['age'])],
@@ -38,10 +36,7 @@ def predict():
             except Exception as e:
                 error='please fill form appropriately'
                 return render_template('index.html', error = error)
-
-    
-    
-
+            
 if __name__ == '__main__':
     app.run(debug=True)
 
